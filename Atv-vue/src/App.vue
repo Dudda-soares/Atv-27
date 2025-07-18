@@ -5,8 +5,9 @@ const numero1= ref(0)
 const numero2= ref(0)
 const operacao = ref('somar')
 
-const total = computed(()=>{
 
+const total = computed(()=>{
+    
     switch(operacao.value){
         case 'somar':
             return numero1.value + numero2.value;
@@ -26,7 +27,7 @@ const total = computed(()=>{
 
 <template>
     <div class="container">
-        <h1 class="p-5 ">Calculadora Aritmetica</h1>
+        <h1 class="p-5 ">Calculadora Aritmética</h1>
         <div class="calculadora" >
             <label class="m-2">Insira o primeiro Valor:  </label>
             <input  type="number"  v-model="numero1"/>
@@ -37,7 +38,7 @@ const total = computed(()=>{
               <option value="somar">Somar</option>
               <option  value="subtrair">Subtrair</option>
               <option value="multiplicar">Multiplicar</option>
-              <option value="dividir">dividir</option>
+              <option value="dividir">Dividir</option>
             </select>
           
             <p class="m-5 ">Total: {{ total }}</p>
